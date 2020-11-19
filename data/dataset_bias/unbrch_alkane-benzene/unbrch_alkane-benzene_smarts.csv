@@ -1,0 +1,3 @@
+label,role,smarts
+unbrch_alkane,A,[R0;D2][R0;D2][R0;D2][R0;D2]
+benzene,B,c1ccccc1

@@ -1,0 +1,3 @@
+label,role,smarts
+ester,A,[#6][CX3](=O)[OX2H0][#6]
+phenyl,B,[cX3]1[cX3H][cX3H][cX3H][cX3H][cX3H]1

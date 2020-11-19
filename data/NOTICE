@@ -1,0 +1,5 @@
+For the datasets benzene, crippen, dataset_bias, logic7, logic8, and logic10:
+
+A. These compounds were drawn from ZINC12: https://zinc.docking.org/
+B. This is a static copy of the data. For the latest purchasing information, it is best to visit the latest version at: https://zinc15.docking.org
+C. We are distributing this subset of ZINC with John Irwin's permission.

@@ -1,0 +1,22 @@
+name: graph_attribution
+channels:
+- rdkit
+- conda-forge
+dependencies:
+- pip
+- rdkit
+- numpy
+- ipython
+- jupyter
+- matplotlib
+- numpy
+- pandas
+- scipy
+- seaborn
+- tqdm
+- scikit-learn
+- networkx
+- pip:
+        - tensorflow
+        - git+https://github.com/deepmind/sonnet.git
+        - graph_nets
