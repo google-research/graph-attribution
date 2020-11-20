@@ -24,7 +24,6 @@ import more_itertools
 import numpy as np
 import sonnet as snt
 import tensorflow as tf
-
 from graph_attribution import datasets
 from graph_attribution import graphnet_models as models
 from graph_attribution import graphnet_techniques as techniques
@@ -210,6 +209,16 @@ class GNN(snt.Module, templates.TransparentModel):
 
         return weights
 
+    @classmethod
+    def from_hparams(cls, hp, task:AttributionTask) -> 'GNN':
+      return cls(node_size = hp.node_size,
+               edge_size = hp.edge_size,
+               global_size = hp.global_size,
+               y_output_size = task.n_outputs,
+               block_type = models.BlockType(hp.block_type),
+               activation = task.get_nn_activation_fn(),
+               target_type = task.target_type,
+               n_layers = hp.n_layers)
 
 def get_batched_attributions(method: AttributionTechnique,
                              model: TransparentModel,
