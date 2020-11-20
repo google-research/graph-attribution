@@ -5,9 +5,8 @@
 Attribution is one tool in the interpretability toolkit that provides ranked importance values on an input ($x$) in relation to an output ($y$). You might care about using attribution techniques on models if you want to build credibility, if you want to debug a model, or want to create a hypothesis for scientific discovery. Not all attribution methods are created equal and practitioners should understand the strengths and weakness of these techniques. We can evaluate these techniques because graphs are a natural testbed: we can create synthetic graph tasks where we can generate labels and ground truth attributions.
 
 ## Quickstart
-You can run code to replicate all results in the paper using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
-
+A code snippet that demonstrastes how to evaluate an attribution is:
 ```
 import graph_attribution as gatt
 
@@ -17,11 +16,13 @@ exp, task, methods = gatt.experiments.get_experiment_setup(task_type, block_type
 hp = gatt.hparams.get_hparams({'block_type':block_type, 'task_type':task_type})
 gnn = experiments.GNN.from_hparams(hp, task)
 gnn(exp.x_test) # Initialize GNN
+# Train model here!
 pred_att = methods['CAM'].attribute(exp.x_test, gnn)
 result = task.evaluate_attributions(exp.att_test, pred_att)
 print(result) # An OrderedDict of attribution statistics.
 ```
 
+You can run code to replicate all results in the paper using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
 If you'd like to run the code locally, or extend it, read on.
 
@@ -46,7 +47,8 @@ We test attribution quality on several GNN architectures:
 * [MPNN (Message Passing Network)][mpnn], where we learn node and edge embeddings.
 * [GraphNets][graphnets], learning node, edge and global embeddings and conditioning each based on these learnt attributes.
 
-## Test a new task or attribution method or model
+## Have an idea you want to test?
+
 To test out new ideas check out **graph_attribution/templates.py**, which has all main abstract classes in the codebase. In particular **AttributionTask** is useful for tasks, **TransparentModel** for GNN models, **AttributionTechnique** for new attribution techniques.
 
 
@@ -57,7 +59,7 @@ The rest of the files are organized as:
     * **data/results** holds CSV files with results from the [main publication][gnnatt].
     * **data/NOTICE** details properties of this data redistribution.
 * **notebooks/** holds Jupyter notebooks.
-* **scripts/**
+* **scripts/** python scripts for generating datasets.
 * **graph_attribution/** holds the code for creating models, generating and evaluating attributions.
 
 
