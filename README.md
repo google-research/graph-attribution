@@ -1,14 +1,32 @@
-# Codebase for _Evaluating Attribution for Graph Neural Networks_.
+# Codebase for [_Evaluating Attribution for Graph Neural Networks_](https://papers.nips.cc/paper/2020/hash/417fbbf2e9d5a28a855a11894b2e795a-Abstract.html).
 
 ![Schematic figure](media/TOC.png)
+
+Attribution is one tool in the interpretability toolkit that provides ranked importance values on an input ($x$) in relation to an output ($y$). You might care about using attribution techniques on models if you want to build credibility, if you want to debug a model, or want to create a hypothesis for scientific discovery. Not all attribution methods are created equal and practitioners should understand the strengths and weakness of these techniques. We can evaluate these techniques because graphs are a natural testbed: we can create synthetic graph tasks where we can generate labels and ground truth attributions.
 
 ## Quickstart
 You can run code to replicate all results in the paper using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
+
+```
+import graph_attribution as gatt
+
+task_type = 'benzene' # Attribution task
+block_type = 'gcn' # Type of GNN block for model
+exp, task, methods = gatt.experiments.get_experiment_setup(task_type, block_type)
+hp = gatt.hparams.get_hparams({'block_type':block_type, 'task_type':task_type})
+gnn = experiments.GNN.from_hparams(hp, task)
+gnn(exp.x_test) # Initialize GNN
+pred_att = methods['CAM'].attribute(exp.x_test, gnn)
+result = task.evaluate_attributions(exp.att_test, pred_att)
+print(result) # An OrderedDict of attribution statistics.
+```
+
+
 If you'd like to run the code locally, or extend it, read on.
 
 ## Replicating results from the paper
-If you want to replicate results from the [main publication][gnnatt] we recommend you run **[notebooks/attribution_plot.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb)**. 
+If you want to replicate results from the [main publication][gnnatt] we recommend you run **[notebooks/plot_evaluation_results.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb)**.
 
 ## Setup task, train GNN and evaluate attributions
 If you want to get up and running with building graph attributions from scratch, we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
@@ -39,6 +57,7 @@ The rest of the files are organized as:
     * **data/results** holds CSV files with results from the [main publication][gnnatt].
     * **data/NOTICE** details properties of this data redistribution.
 * **notebooks/** holds Jupyter notebooks.
+* **scripts/**
 * **graph_attribution/** holds the code for creating models, generating and evaluating attributions.
 
 
@@ -68,7 +87,7 @@ BibTex entry:
   author = {Benjamin Sanchez-Lengeling and Jennifer Wei and Brian Lee and Emily Reif and Wesley Qian and Yiliu Wang and Kevin James McCloskey and Lucy Colwell and Alexander B Wiltschko},
   booktitle = {Advances in Neural Information Processing Systems 33},
   year      = {2020},
-  url       = {http://arxiv.org/abs/X},
+  url       = {https://papers.nips.cc/paper/2020/hash/417fbbf2e9d5a28a855a11894b2e795a-Abstract.html},
 }
 ```
 

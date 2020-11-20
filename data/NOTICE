@@ -4,8 +4,4 @@ A. These compounds were drawn from ZINC12: https://zinc.docking.org/
 B. This is a static copy of the data. For the latest purchasing information, it is best to visit the latest version at: https://zinc15.docking.org
 C. We are distributing this subset of ZINC with John Irwin's permission.
 
-A. These compounds were drawn from ZINC12: https://zinc.docking.org/
-B. This is a static copy of the data. For the latest purchasing information, it is best to visit the latest version at: https://zinc15.docking.org
-C. We are distributing this subset of ZINC with John Irwin's permission.
-
 All data from "McCloskey, K., Taly, A., Monti, F., Brenner, M. P. & Colwell, L. J. Using attribution to decode binding mechanism in neural network models for chemistry. Proc. Natl. Acad. Sci. U. S. A. 116, 11624–11629 (2019)" also follows these points and is found in "all_16_logics_train_and_test.zip". Data comes as csv files with smiles, labels and train/test splits.
