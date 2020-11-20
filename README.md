@@ -66,8 +66,11 @@ The rest of the files are organized as:
 ## Installing
 The codebase is primarily a [Tensorflow 2.0](https://www.tensorflow.org/install) based framework that uses [Sonnet](https://github.com/deepmind/sonnet) and
 [Graph Nets](https://github.com/deepmind/graph_nets) for building GNN models.
-
-We recommend using [Anaconda](https://www.anaconda.com/) for installing all dependencies. Requirements can be installed into a fresh conda environment as follows:
+If you are using pre-generated datsets, you can git clone the repo and pip install it:
+```
+pip install git+https://github.com/google-research/graph-attribution
+```
+If you plan on generating datasets, we recommend using [Anaconda](https://www.anaconda.com/) for installing all dependencies. Requirements can be installed into a fresh conda environment as follows:
 
 ```bash
 $ conda env create -f environment.yml -n graph_attribution
@@ -96,8 +99,8 @@ BibTex entry:
 ## Related work
 If you cite this work, you may also want to cite:
 
-[McCloskey, K., Taly, A., Monti, F., Brenner, M. P. & Colwell, L. J. Using attribution to decode binding mechanism in neural network models for chemistry. Proc. Natl. Acad. Sci. U. S. A. 116, 11624–11629 (2019)][bias]
-[Ying, Z., Bourgeois, D., You, J., Zitnik, M. & Leskovec, J. GNNExplainer: Generating Explanations for Graph Neural Networks. in Advances in Neural Information Processing Systems (eds. Wallach, H. et al.) vol. 32 9244–9255 (Curran Associates, Inc., 2019).][explainer]
+* [McCloskey, K., Taly, A., Monti, F., Brenner, M. P. & Colwell, L. J. Using attribution to decode binding mechanism in neural network models for chemistry. Proc. Natl. Acad. Sci. U. S. A. 116, 11624–11629 (2019)][bias]
+* [Ying, Z., Bourgeois, D., You, J., Zitnik, M. & Leskovec, J. GNNExplainer: Generating Explanations for Graph Neural Networks. in Advances in Neural Information Processing Systems (eds. Wallach, H. et al.) vol. 32 9244–9255 (Curran Associates, Inc., 2019).][explainer]
 
 [bias]: https://www.pnas.org/content/116/24/11624
 [explainer]: https://arxiv.org/abs/1903.03894
