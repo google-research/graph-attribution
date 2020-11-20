@@ -2,11 +2,17 @@
 
 ![Schematic figure](media/TOC.png)
 
+## Quickstart
+
+You can run code to replicate all results in the paper using Colab [at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
+
+If you'd like to run the code locally, or extend it, read on.
+
 ## Setup task, train GNN and evaluate attributions
-If you want to get up and running attributions we recommend you run **notebooks/train_and_evaluate.ipynb** which sets up an attribution task, trains a GNN on a predictive task, and calculates attribution with several techniques and evaluates the attributions. At the end we can visually compare atrributions.
+If you want to get up and running attributions we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attribution with several techniques and evaluates the attributions. At the end we can visually compare atrributions.
 
 ## Replicate results
-If you want to replicate results from the [main publication][gnnatt] we recommend you run **notebooks/attribution_plot.ipynb**.
+If you want to replicate results from the [main publication][gnnatt] we recommend you run **[notebooks/attribution_plot.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb)**. 
 
 ## What's implemented?
 
