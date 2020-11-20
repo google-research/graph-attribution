@@ -1,4 +1,4 @@
-Codebase for _Evaluating Attribution for Graph Neural Networks_.
+# Codebase for _Evaluating Attribution for Graph Neural Networks_.
 
 ![Schematic figure](media/TOC.png)
 
@@ -74,7 +74,7 @@ If you cite this work, you may also want to cite:
 
 [bias]: https://www.pnas.org/content/116/24/11624
 [explainer]: https://arxiv.org/abs/1903.03894
-[gnnatt]: https://arxiv.org/abs/X
+[gnnatt]: https://papers.nips.cc/paper/2020/file/417fbbf2e9d5a28a855a11894b2e795a-Paper.pdf
 [mpnn]: https://arxiv.org/abs/1704.01212
 [gcn]: https://arxiv.org/abs/1509.09292
 [graphnets]:arxiv.org/abs/1806.01261
