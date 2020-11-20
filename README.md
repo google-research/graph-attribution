@@ -2,7 +2,7 @@
 
 ![Schematic figure](media/TOC.png)
 
-Attribution is one tool in the interpretability toolkit that provides ranked importance values on an input ($x$) in relation to an output ($y$). You might care about using attribution techniques on models if you want to build credibility, if you want to debug a model, or want to create a hypothesis for scientific discovery. Not all attribution methods are created equal and practitioners should understand the strengths and weakness of these techniques. We can evaluate these techniques because graphs are a natural testbed: we can create synthetic graph tasks where we can generate labels and ground truth attributions.
+Attribution is one tool in the interpretability toolkit that provides ranked importance values on an input (x) in relation to an output (y). You might care about using attribution techniques on models if you want to build credibility, if you want to debug a model, or want to create a hypothesis for scientific discovery. Not all attribution methods are created equal and practitioners should understand the strengths and weakness of these techniques. We can evaluate these techniques because graphs are a natural testbed: we can create synthetic graph tasks where we can generate labels and ground truth attributions.
 
 ## Quickstart
 
