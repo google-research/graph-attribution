@@ -11,16 +11,16 @@ A code snippet that demonstrastes how to evaluate an attribution is:
 ```python
 import graph_attribution as gatt
 
-task_type = 'benzene' # Attribution task
-block_type = 'gcn' # Type of GNN block for model
+task_type = 'benzene'
+block_type = 'gcn'
 exp, task, methods = gatt.experiments.get_experiment_setup(task_type, block_type)
 hp = gatt.hparams.get_hparams({'block_type':block_type, 'task_type':task_type})
 gnn = experiments.GNN.from_hparams(hp, task)
-gnn(exp.x_test) # Initialize GNN
+gnn(exp.x_test)
 # Train model here!
 pred_att = methods['CAM'].attribute(exp.x_test, gnn)
 result = task.evaluate_attributions(exp.att_test, pred_att)
-print(result) # An OrderedDict of attribution statistics.
+print(result) # A dict of attribution statistics.
 ```
 
 You can run code to replicate all results in the paper using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
