@@ -23,12 +23,9 @@ result = task.evaluate_attributions(exp.att_test, pred_att)
 print(result) # A dict of attribution statistics.
 ```
 
-You can run code to replicate all results in the paper using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
+You can run code to replicate all results in the [paper][gnnatt]  using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
 If you'd like to run the code locally, or extend it, read on.
-
-## Replicating results from the paper
-If you want to replicate results from the [main publication][gnnatt] we recommend you run **[notebooks/plot_evaluation_results.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb)**.
 
 ## Setup task, train GNN and evaluate attributions
 If you want to get up and running with building graph attributions from scratch, we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
