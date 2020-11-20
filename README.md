@@ -42,7 +42,7 @@ Attribution techniques:
 We test attribution quality on several GNN architectures:
 * [GCN (Graph Convolution Network)][gcn], the simplest model, where we learn only node embeddings.
 * [GAT (Graph Attention Network)][gat], where message passing happens via an attention mechanism.
-* [MPNN (Message Passing Network)][mpnn], where we learn node and edge embeddings.
+* [MPNN (Message Passing Neural Network)][mpnn], where we learn node and edge embeddings.
 * [GraphNets][graphnets], learning node, edge and global embeddings and conditioning each based on these learnt attributes.
 
 ## Have an idea you want to test?
