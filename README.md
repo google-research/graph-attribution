@@ -23,12 +23,12 @@ result = task.evaluate_attributions(exp.att_test, pred_att)
 print(result) # A dict of attribution statistics.
 ```
 
-You can run code to replicate all results in the [paper][gnnatt]  using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
+
+If you want to get up and **running with building graph attributions from scratch**, we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
+
+You can run code to **replicate all results** in the [paper][gnnatt]  using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
 If you'd like to run the code locally, or extend it, read on.
-
-## Setup task, train GNN and evaluate attributions
-If you want to get up and running with building graph attributions from scratch, we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
 
 ## What's implemented?
 Attribution techniques:
@@ -40,9 +40,9 @@ Attribution techniques:
 * [Attention weights][gat]
 
 We test attribution quality on several GNN architectures:
-* [GCN (Graph Convolution Network)][gcn], the simplest model, where we learn only node embeddings.
+* [GCN (Graph Convolution Network)][gcn], where our learnt representations depend on learnt nodes.
 * [GAT (Graph Attention Network)][gat], where message passing happens via an attention mechanism.
-* [MPNN (Message Passing Neural Network)][mpnn], where we learn node and edge embeddings.
+* [MPNN (Message Passing Neural Network)][mpnn], where our learnt representations depend on learnt nodes and edges.
 * [GraphNets][graphnets], learning node, edge and global embeddings and conditioning each based on these learnt attributes.
 
 ## Have an idea you want to test?
