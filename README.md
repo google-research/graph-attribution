@@ -7,7 +7,7 @@ Attribution is one tool in the interpretability toolkit that provides ranked imp
 ## Quickstart
 
 A code snippet that demonstrastes how to evaluate an attribution is:
-```
+```python
 import graph_attribution as gatt
 
 task_type = 'benzene' # Attribution task
