@@ -7,7 +7,7 @@ Attribution is one tool in the interpretability toolkit that provides ranked imp
 
 ## Quickstart
 
-A code snippet that demonstrastes how to evaluate an attribution is:
+A code snippet that demonstrastes how to create an attribution on a graph:
 ```python
 import graph_attribution as gatt
 
@@ -24,9 +24,9 @@ print(result) # A dict of attribution statistics.
 ```
 
 
-If you want to get up and **running with building graph attributions from scratch**, we recommend you run **[notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb)** which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
+If you want to get up and running with building graph attributions from scratch, we recommend you run [notebooks/train_and_evaluate.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/train_attribute_and_evaluate.ipynb), which sets up an attribution task, trains a GNN on a predictive task, and calculates attributions with several techniques, and finally evaluates the attributions. At the end of the notebook, you can visually compare graph attributions.
 
-You can run code to **replicate all results** in the [paper][gnnatt]  using [notebooks/attribution_plot.ipynb, running live in Colab at this link](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
+You can run code to replicate all results in the [paper][gnnatt]  using [notebooks/plot_evaluation_results.ipynb](https://github.com/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb), which you can also [run live in Colab (no downloads required)](https://colab.sandbox.google.com/github/google-research/graph-attribution/blob/main/notebooks/plot_evaluation_results.ipynb).
 
 If you'd like to run the code locally, or extend it, read on.
 
