@@ -1,9 +1,9 @@
 name: graph_attribution
 channels:
 - rdkit
-- conda-forge
 dependencies:
 - pip
+- python=3.7
 - rdkit
 - numpy
 - ipython
@@ -20,3 +20,5 @@ dependencies:
         - tensorflow
         - git+https://github.com/deepmind/sonnet.git
         - graph_nets
+        - more-itertools
+        - ml-collections
